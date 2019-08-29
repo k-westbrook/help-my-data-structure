@@ -51,7 +51,10 @@ class Stack extends React.Component {
     return (
       <div className='stack-container'>
         <div>
-          <p>Stack</p>
+          <h3 className='ds-header'>Stack</h3>
+          <div className='ds-explanation'>
+            <p><b>What is a stack?</b> A stack is a data strucutre that stores data like it says in its name --like a stack of pancakes. It follows the LIFO- Last In, First Out Order. You push an element in and another and another. The elements are removed by the pop function which pops from the end. The peek function looks at the element next to be popped. Try a stack out!</p>
+          </div>
         </div>
         {(!this.state.stack) ?
           <div>
@@ -59,35 +62,14 @@ class Stack extends React.Component {
           </div>
           :
           <div>
+
             <div>
-              <h3>the stack</h3>
-            </div>
-            <div>
-              <PushForm handlePush={this.handlePush} handlePop={this.handlePop} handlePeek={this.handlePeek} />
+              <PushForm handlePush={this.handlePush} handlePop={this.handlePop} handlePeek={this.handlePeek} isPeek={this.state.isPeek}
+                peek={this.state.peek} />
             </div>
             <div>
               <h5 className='stack-header'>The Stack</h5>
               <StackDisplay stack={this.state.stack} />
-            </div>
-
-            <div>
-              <h5 className='stack-peek'>Peek:</h5>
-              {(!this.state.isPeek) ?
-                <div>
-                  <p>Push Peek to get Top of Stack!</p>
-                </div> :
-                <div>
-                  {(this.state.peek) ?
-                    <div>
-                      <p>{this.state.peek}</p>
-                    </div> :
-                    <div>
-                      <p>Stack is Empty</p>
-                    </div>
-                  }
-                </div>
-
-              }
             </div>
 
           </div>
