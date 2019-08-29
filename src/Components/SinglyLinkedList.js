@@ -2,18 +2,15 @@ import React from 'react';
 import BST from '../DataStructures/BST.js'
 import '../App.css';
 
-class BinarySearchTree extends React.Component {
+class SinglyLinkedList extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      BSTArray: []
+      LinkedList: []
     }
   }
   render() {
-    let test = new BST();
-    test.addNode(1);
-    test.addNode(2);
 
     return (
       <div className='binary-search-container'>
@@ -29,4 +26,4 @@ class BinarySearchTree extends React.Component {
   }
 }
 
-export default BinarySearchTree;
+export default SinglyLinkedList;

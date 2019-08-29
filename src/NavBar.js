@@ -25,6 +25,11 @@ class Routes extends React.Component {
           </Link>
         </div>
         <div className='nav-bar-item'>
+          <Link className='link' to="/singlylinkedlist">
+            <h3>Singly Linked List</h3>
+          </Link>
+        </div>
+        <div className='nav-bar-item'>
           <Link className='link' to="/binarysearchtree">
             <h3>Binary Search Tree</h3>
           </Link>
