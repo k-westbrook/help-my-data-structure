@@ -1,16 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router } from "react-router-dom";
 import './App.css';
 import Routes from './Routes';
 import NavBar from './NavBar';
 
-function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Routes />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App" >
+        <Router>
+          <NavBar />
+          <Routes />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
