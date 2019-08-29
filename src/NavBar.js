@@ -9,21 +9,22 @@ class Routes extends React.Component {
   render() {
     return (
       <div className='nav-bar-container'>
-        <div>
-          <Link to="/">
+        <div >
+          <Link className='link' to="/">
             <h3>Home</h3>
           </Link>
         </div>
         <div>
-          <Link to="/binarysearchtree">
-            <h3>Binary Search Tree</h3>
-          </Link>
-        </div>
-        <div>
-          <Link to="/stack">
+          <Link className='link' to="/stack">
             <h3>Stack</h3>
           </Link>
         </div>
+        <div>
+          <Link className='link' to="/binarysearchtree">
+            <h3>Binary Search Tree</h3>
+          </Link>
+        </div>
+
 
       </div>
     )

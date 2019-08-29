@@ -2,6 +2,8 @@
   text-align: center;
   display: flex;
   flex-direction: row;
+  background-color: black;
+  color:yellow;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -34,14 +36,30 @@
 }
 
 .nav-bar-container{
-
-  flex-grow: 1;
+  width:20vw;
   border-right-style: groove;
   height: 100vh;
+  font-size: 4vh;
+  padding: 2vh;
 }
 
+.link{
+color:yellow;
+  text-decoration: none;
+}
 .route-container{
-flex-grow: 5;
+width: 80vw;
+
+}
+.home-page{
+  font-size: 5vw;
+}
+.home-page-text{
+  font-size:5vh;
+  padding:10vh;
+  margin:2vh;
+  border-style:groove;
+  border-color: yellow;
 }
 
 .stack-container{
@@ -76,6 +94,15 @@ border-style:solid;
 }
 
 .stack-peek
+{
+  font-size: 8vh;
+  text-align: left;
+  padding:0;
+  margin-top:5vh;
+  margin-bottom: 2vh;
+}
+
+.stack-empty
 {
   font-size: 8vh;
   text-align: left;
