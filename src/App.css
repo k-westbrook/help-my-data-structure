@@ -50,8 +50,6 @@ color:#FFFFF6;
 }
 .route-container{
 width: 80vw;
-height: 100vh;
-
 }
 .home-page{
   font-size: 5vw;
@@ -62,6 +60,7 @@ height: 100vh;
   margin:2vh;
   border-style:groove;
   border-color: #FFFFF6;
+  background-color:black;
 }
 .ds-header{
   font-size:5vw;
@@ -136,6 +135,7 @@ font-size: 3vh;
 min-height: 20vh;
 width: 60vw;
 margin-bottom:5vh;
+background-color: black;
 
 }
 .stack-header
@@ -152,9 +152,9 @@ margin-bottom:5vh;
   margin-right:.5vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
-
 padding:2vh;
 border-style:solid;
+background-color: #3F3F3F;
 
 }
 .peek-container{
