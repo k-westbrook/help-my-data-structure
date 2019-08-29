@@ -1,6 +1,6 @@
 import React from 'react';
-import BST from './DataStructures/BST.js'
-import './App.css';
+import BST from '../DataStructures/BST.js'
+import '../App.css';
 
 class BinarySearchTree extends React.Component {
 
@@ -18,7 +18,7 @@ class BinarySearchTree extends React.Component {
     return (
       <div className='binary-search-container'>
         <div>
-          <p>binary search tree</p>
+          <p>Coming Soon</p>
         </div>
         <div>
 

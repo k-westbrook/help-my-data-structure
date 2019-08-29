@@ -19,6 +19,11 @@ class Routes extends React.Component {
             <h3>Binary Search Tree</h3>
           </Link>
         </div>
+        <div>
+          <Link to="/stack">
+            <h3>Stack</h3>
+          </Link>
+        </div>
 
       </div>
     )
