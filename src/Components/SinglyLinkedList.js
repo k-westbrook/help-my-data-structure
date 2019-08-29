@@ -1,5 +1,4 @@
 import React from 'react';
-import BST from '../DataStructures/BST.js'
 import '../App.css';
 
 class SinglyLinkedList extends React.Component {

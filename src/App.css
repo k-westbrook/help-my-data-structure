@@ -224,6 +224,11 @@ background-color: #3F3F3F;
   width: 100vw;
 
   }
+  .binary-search-container
+  {
+    min-height: 45vh;
+    font-size: 3vh;
+  }
   .home-page{
     font-size: 10vw;
   }
