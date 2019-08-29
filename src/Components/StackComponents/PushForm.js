@@ -28,10 +28,7 @@ class PushForm extends React.Component {
           <button onClick={this.props.handlePop}>POP</button>
         </div>
         <div>
-          <button>PEEK</button>
-        </div>
-        <div>
-          <button>isEmpty</button>
+          <button onClick={this.props.handlePeek}>PEEK</button>
         </div>
       </div >
     );

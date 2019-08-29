@@ -43,3 +43,43 @@
 .route-container{
 flex-grow: 5;
 }
+
+.stack-container{
+  margin-left:2vw;
+margin-right:2vw;
+}
+
+.stack-display-container
+{
+display: flex;
+flex-wrap: wrap;
+border-style: solid;
+padding:1vh;
+font-size: 3vh;
+min-height: 15vh;
+}
+.stack-header
+{
+  font-size: 8vh;
+  text-align: left;
+  padding:0;
+  margin-top:5vh;
+  margin-bottom: 2vh;
+}
+
+.stack-item{
+  margin-left:.5vw;
+  margin-right:.5vw;
+padding:2vh;
+border-style:solid;
+
+}
+
+.stack-peek
+{
+  font-size: 8vh;
+  text-align: left;
+  padding:0;
+  margin-top:5vh;
+  margin-bottom: 2vh;
+}

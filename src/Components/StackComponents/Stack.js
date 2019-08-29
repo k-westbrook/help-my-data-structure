@@ -2,16 +2,20 @@ import React from 'react';
 import '../../App.css';
 import { StackDS } from '../../DataStructures/StackDS'
 import PushForm from './PushForm';
+import StackDisplay from './StackDisplay';
 
 class Stack extends React.Component {
 
   constructor() {
     super();
     this.state = {
-      stack: null
+      stack: null,
+      isPeek: false,
+      peek: null
     }
     this.handlePush = this.handlePush.bind(this);
     this.handlePop = this.handlePop.bind(this);
+    this.handlePeek = this.handlePeek.bind(this);
   }
 
   componentDidMount() {
@@ -23,17 +27,24 @@ class Stack extends React.Component {
   }
 
   handlePush(evt) {
-
+    let newStackDS = this.state.stack;
     evt.preventDefault();
     let itemToBePushed = evt.target.pushedItem.value;
-    this.state.stack.push(itemToBePushed);
-    console.log(this.state.stack)
+    newStackDS.push(itemToBePushed)
+    this.setState({ stack: newStackDS, isPeek: false });
 
   }
 
-  handlePop(evt) {
-    this.state.stack.pop();
-    console.log(this.state.stack)
+  handlePop() {
+    let newStackDS = this.state.stack;
+    newStackDS.pop();
+    this.setState({ stack: newStackDS, isPeek: false });
+  }
+
+  handlePeek() {
+    const top = this.state.stack.peek();
+    this.setState({ isPeek: true, peek: top });
+
   }
   render() {
 
@@ -52,8 +63,33 @@ class Stack extends React.Component {
               <h3>the stack</h3>
             </div>
             <div>
-              <PushForm handlePush={this.handlePush} handlePop={this.handlePop} />
+              <PushForm handlePush={this.handlePush} handlePop={this.handlePop} handlePeek={this.handlePeek} />
             </div>
+            <div>
+              <h5 className='stack-header'>The Stack</h5>
+              <StackDisplay stack={this.state.stack} />
+            </div>
+
+            <div>
+              <h5 className='stack-peek'>Peek:</h5>
+              {(!this.state.isPeek) ?
+                <div>
+                  <p>Push Peek to get Top of Stack!</p>
+                </div> :
+                <div>
+                  {(this.state.peek) ?
+                    <div>
+                      <p>{this.state.peek}</p>
+                    </div> :
+                    <div>
+                      <p>Stack is Empty</p>
+                    </div>
+                  }
+                </div>
+
+              }
+            </div>
+
           </div>
         }
         <div>
