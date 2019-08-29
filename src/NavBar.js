@@ -20,6 +20,11 @@ class Routes extends React.Component {
           </Link>
         </div>
         <div className='nav-bar-item'>
+          <Link className='link' to="/queue">
+            <h3>Queue</h3>
+          </Link>
+        </div>
+        <div className='nav-bar-item'>
           <Link className='link' to="/binarysearchtree">
             <h3>Binary Search Tree</h3>
           </Link>

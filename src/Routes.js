@@ -4,6 +4,7 @@ import Home from './Home';
 import BinarySearchTree from './Components/BinarySearchTree'
 import './App.css';
 import Stack from './Components/StackComponents/Stack';
+import Queue from './Components/QueueComponents/Queue';
 
 class Routes extends React.Component {
 
@@ -14,6 +15,7 @@ class Routes extends React.Component {
         <Switch>
           <Route path="/binarysearchtree" component={BinarySearchTree} />
           <Route path="/stack" component={Stack} />
+          <Route path="/queue" component={Queue} />
           <Route exact path="/" component={Home} />
         </Switch>
       </div>
