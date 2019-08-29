@@ -10,6 +10,8 @@ class Stack extends React.Component {
     this.state = {
       stack: null
     }
+    this.handlePush = this.handlePush.bind(this);
+    this.handlePop = this.handlePop.bind(this);
   }
 
   componentDidMount() {
@@ -18,6 +20,20 @@ class Stack extends React.Component {
     this.setState({
       stack: newStackDS
     })
+  }
+
+  handlePush(evt) {
+
+    evt.preventDefault();
+    let itemToBePushed = evt.target.pushedItem.value;
+    this.state.stack.push(itemToBePushed);
+    console.log(this.state.stack)
+
+  }
+
+  handlePop(evt) {
+    this.state.stack.pop();
+    console.log(this.state.stack)
   }
   render() {
 
@@ -36,7 +52,7 @@ class Stack extends React.Component {
               <h3>the stack</h3>
             </div>
             <div>
-              <PushForm />
+              <PushForm handlePush={this.handlePush} handlePop={this.handlePop} />
             </div>
           </div>
         }

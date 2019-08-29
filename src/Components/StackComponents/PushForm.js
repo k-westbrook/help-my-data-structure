@@ -6,14 +6,14 @@ class PushForm extends React.Component {
   render() {
     return (
       <div >
-        <form>
+        <form onSubmit={this.props.handlePush}>
           <div>
             <label>
               <div>
                 <h5>Item to Push</h5>
               </div>
               <div>
-                <input type='text' required />
+                <input type='text' name="pushedItem" required />
               </div>
             </label>
           </div>
@@ -25,7 +25,7 @@ class PushForm extends React.Component {
           </div>
         </form>
         <div>
-          <button>POP</button>
+          <button onClick={this.props.handlePop}>POP</button>
         </div>
         <div>
           <button>PEEK</button>
