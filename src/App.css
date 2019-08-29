@@ -2,8 +2,8 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  background-color: black;
-  color:yellow;
+  background-color: #3F3F3F;
+  color:#FFFFF6;
 }
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -38,17 +38,19 @@
 .nav-bar-container{
   width:20vw;
   border-right-style: groove;
-  height: 100vh;
+  height: inherit;
   font-size: 4vh;
+  min-height: 100vh;
   padding: 2vh;
 }
 
 .link{
-color:yellow;
+color:#FFFFF6;
   text-decoration: none;
 }
 .route-container{
 width: 80vw;
+height: 100vh;
 
 }
 .home-page{
@@ -59,7 +61,7 @@ width: 80vw;
   padding:10vh;
   margin:2vh;
   border-style:groove;
-  border-color: yellow;
+  border-color: #FFFFF6;
 }
 .ds-header{
   font-size:5vw;
@@ -71,7 +73,10 @@ width: 80vw;
   width: 60vw;
   margin-left:5vw;
   margin-right:5vw;
-  border-style: dashed;
+  border-style: solid;
+  padding:1vw;
+  font-size:2.5vh;
+
 
 }
 
@@ -93,8 +98,8 @@ width: 80vw;
   width: 15vw;
   height:10vh;
   background-color: black;
-  border-color: yellow;
-  color:yellow;
+  border-color: #FFFFF6;
+  color:#FFFFF6;
   font-size:5vh;
 }
 
@@ -128,21 +133,26 @@ flex-wrap: wrap;
 border-style: solid;
 padding:1vh;
 font-size: 3vh;
-min-height: 15vh;
+min-height: 20vh;
 width: 60vw;
+margin-bottom:5vh;
+
 }
 .stack-header
 {
   font-size: 8vh;
   text-align: left;
   padding:0;
-  margin-top:5vh;
+  margin-top:3vh;
   margin-bottom: 2vh;
 }
 
 .stack-item{
   margin-left:.5vw;
   margin-right:.5vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+
 padding:2vh;
 border-style:solid;
 

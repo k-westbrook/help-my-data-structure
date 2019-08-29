@@ -18,7 +18,7 @@ class BinarySearchTree extends React.Component {
     return (
       <div className='binary-search-container'>
         <div>
-          <p>Coming Soon</p>
+          <h1>Coming Soon</h1>
         </div>
         <div>
 

@@ -27,6 +27,17 @@ class PushForm extends React.Component {
         </form>
         <div className='button-group'>
           <button className='button-style' onClick={this.props.handlePop}>POP</button>
+          <div className='peek-container'>
+
+            {(this.props.stack.stack.length === 0) ?
+              <div>
+                <h5> Stack is Empty, Push an Item!</h5 >
+              </div> :
+              <div>
+              </div>
+
+            }
+          </div>
         </div>
         <div className='button-group'>
           <button className='button-style' onClick={this.props.handlePeek}>PEEK</button>

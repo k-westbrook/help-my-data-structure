@@ -53,32 +53,34 @@ class Stack extends React.Component {
         <div>
           <h3 className='ds-header'>Stack</h3>
           <div className='ds-explanation'>
-            <p><b>What is a stack?</b> A stack is a data strucutre that stores data like it says in its name --like a stack of pancakes. It follows the LIFO- Last In, First Out Order. You push an element in and another and another. The elements are removed by the pop function which pops from the end. The peek function looks at the element next to be popped. Try a stack out!</p>
+            <p><b>What is a stack?</b> A stack is a data strucutre that stores data like it says in its name --like a stack of pancakes.
+          It follows the LIFO- Last In, First Out Order. You push an element in and another and another. The elements are removed by the pop function which pops from the end.  The peek function looks at the element next to be popped. Try a stack out!</p>
           </div>
         </div>
-        {(!this.state.stack) ?
-          <div>
-            <h3>Loading..</h3>
-          </div>
-          :
-          <div>
-
+        {
+          (!this.state.stack) ?
             <div>
-              <PushForm handlePush={this.handlePush} handlePop={this.handlePop} handlePeek={this.handlePeek} isPeek={this.state.isPeek}
-                peek={this.state.peek} />
+              <h3>Loading..</h3>
             </div>
+            :
             <div>
-              <h5 className='stack-header'>The Stack</h5>
-              <StackDisplay stack={this.state.stack} />
-            </div>
 
-          </div>
+              <div>
+                <PushForm handlePush={this.handlePush} handlePop={this.handlePop} handlePeek={this.handlePeek} isPeek={this.state.isPeek}
+                  peek={this.state.peek} stack={this.state.stack} />
+              </div>
+              <div>
+                <h5 className='stack-header'>The Stack</h5>
+                <StackDisplay stack={this.state.stack} />
+              </div>
+
+            </div>
         }
         <div>
 
         </div>
 
-      </div>
+      </div >
     )
   }
 }
