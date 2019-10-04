@@ -20,6 +20,17 @@ export class SinglyLinkedListDS {
     }
 
   }
+  addFirst(val) {
+    let newNode = new Node(val);
+
+    if (!this.head) {
+      this.head = this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+  }
 
   remove() {
     if (this.head === this.tail) {
