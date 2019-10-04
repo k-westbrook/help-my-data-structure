@@ -5,7 +5,7 @@ import BinarySearchTree from './Components/BinarySearchTree'
 import './App.css';
 import Stack from './Components/StackComponents/Stack';
 import Queue from './Components/QueueComponents/Queue';
-import SinglyLinkedList from './Components/SinglyLinkedList';
+import SinglyLinkedList from './Components/SinglyLinkedListComponents/SinglyLinkedList';
 
 class Routes extends React.Component {
 
