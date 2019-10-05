@@ -16,6 +16,7 @@ class SinglyLinkedList extends React.Component {
     this.handleAddFirst = this.handleAddFirst.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
     this.handleRemoveFirst = this.handleRemoveFirst.bind(this);
+    this.handleInsertAt = this.handleInsertAt.bind(this);
   }
 
   componentDidMount() {
@@ -43,6 +44,18 @@ class SinglyLinkedList extends React.Component {
     evt.preventDefault();
     let itemToAdd = evt.target.addItem.value;
     newSinglyLinkedListDS.addFirst(itemToAdd);
+    this.setState({
+      linkedList: newSinglyLinkedListDS,
+      arrayValues: newSinglyLinkedListDS.getAllValues()
+    });
+  }
+
+  handleInsertAt(evt) {
+    let newSinglyLinkedListDS = this.state.linkedList;
+    evt.preventDefault();
+    let itemToAdd = evt.target.addItem.value;
+    let indexToAdd = evt.target.index.value;
+    newSinglyLinkedListDS.insertAt(itemToAdd, parseInt(indexToAdd));
     this.setState({
       linkedList: newSinglyLinkedListDS,
       arrayValues: newSinglyLinkedListDS.getAllValues()
@@ -91,6 +104,7 @@ class SinglyLinkedList extends React.Component {
 
               <div>
                 <PushForm handleAdd={this.handleAdd} handleRemove={this.handleRemove}
+                  handleInsertAt={this.handleInsertAt}
                   handleRemoveFirst={this.handleRemoveFirst}
                   handleAddFirst={this.handleAddFirst} linkedList={this.state.linkedList} arrayValues={this.state.arrayValues} />
               </div>

@@ -32,6 +32,29 @@ export class SinglyLinkedListDS {
 
   }
 
+  insertAt(val, index) {
+    let newNode = new Node(val);
+
+    let count = 0;
+    if (index === 0) {
+      this.addFirst(val);
+    } else if (index === this.size()) {
+      this.add(val);
+    } else if (index > 0 || index < this.size()) {
+      let current = this.head;
+      let previous;
+      while (count !== index) {
+        previous = current;
+        current = current.next;
+        count++;
+      }
+      previous.next = newNode;
+      newNode.next = current;
+
+    }
+    console.log(this)
+  }
+
   remove() {
     if (this.head === this.tail) {
       this.head = this.tail = null;

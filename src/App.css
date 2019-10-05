@@ -95,12 +95,16 @@ width: 80vw;
   padding:2vh;
 
 }
+.action-item{
+  margin-bottom: 5vh;
+}
 
 .button-group{
   margin-left:2vw;
   margin-right:2vw;
   width: 15vw;
   height: 25vh;
+
 }
 
 .button-style{
