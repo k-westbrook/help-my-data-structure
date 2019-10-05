@@ -75,7 +75,7 @@ export class SinglyLinkedListDS {
         current = current.next;
         count++;
       }
-      return current.value;
+      return current;
     }
   }
 

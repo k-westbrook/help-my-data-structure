@@ -62,6 +62,7 @@ class SinglyLinkedList extends React.Component {
 
 
   render() {
+    console.log(this.state.arrayValues)
     return (
       <div className='stack-container'>
         <div>
