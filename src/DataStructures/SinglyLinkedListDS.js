@@ -35,7 +35,7 @@ export class SinglyLinkedListDS {
   remove() {
     if (this.head === this.tail) {
       this.head = this.tail = null;
-    } else if (this.head) {
+    } else {
       let current = this.head;
       let previous;
 
@@ -47,7 +47,18 @@ export class SinglyLinkedListDS {
       this.tail = previous;
       previous.next = null;
     }
-    console.log(this)
+  }
+
+  removeFirst() {
+
+    if (this.head === this.tail) {
+      this.head = this.tail = null;
+    } else {
+      let newHead = this.head.next;
+      this.head.next = null;
+      this.head = newHead;
+    }
+
   }
 
   size() {

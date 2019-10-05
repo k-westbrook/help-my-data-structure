@@ -60,6 +60,20 @@ class PushForm extends React.Component {
             }
           </div>
         </div>
+        <div className='button-group'>
+          <button className='button-style' onClick={this.props.handleRemoveFirst}>REMOVE FIRST</button>
+          <div className='peek-container'>
+
+            {(this.props.arrayValues.length === 0) ?
+              <div>
+                <h5> Linked List is Empty, Add an Item!</h5 >
+              </div> :
+              <div>
+              </div>
+
+            }
+          </div>
+        </div>
 
       </div >
     );

@@ -91,6 +91,8 @@ width: 80vw;
   display: flex;
   margin-top:5vh;
   justify-content: center;
+  flex-wrap: wrap;
+  padding:2vh;
 
 }
 
@@ -107,7 +109,7 @@ width: 80vw;
   background-color: black;
   border-color: #FFFFF6;
   color:#FFFFF6;
-  font-size:5vh;
+  font-size:4vh;
 }
 
 .form-item-to-push

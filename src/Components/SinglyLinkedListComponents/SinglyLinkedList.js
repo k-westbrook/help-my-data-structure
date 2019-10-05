@@ -15,7 +15,7 @@ class SinglyLinkedList extends React.Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleAddFirst = this.handleAddFirst.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
-
+    this.handleRemoveFirst = this.handleRemoveFirst.bind(this);
   }
 
   componentDidMount() {
@@ -59,6 +59,16 @@ class SinglyLinkedList extends React.Component {
     });
   }
 
+  handleRemoveFirst(evt) {
+    let newSinglyLinkedListDS = this.state.linkedList;
+    evt.preventDefault();
+    newSinglyLinkedListDS.removeFirst();
+    this.setState({
+      linkedList: newSinglyLinkedListDS,
+      arrayValues: newSinglyLinkedListDS.getAllValues()
+    });
+  }
+
 
 
   render() {
@@ -80,7 +90,9 @@ class SinglyLinkedList extends React.Component {
             <div>
 
               <div>
-                <PushForm handleAdd={this.handleAdd} handleRemove={this.handleRemove} handleAddFirst={this.handleAddFirst} linkedList={this.state.linkedList} arrayValues={this.state.arrayValues} />
+                <PushForm handleAdd={this.handleAdd} handleRemove={this.handleRemove}
+                  handleRemoveFirst={this.handleRemoveFirst}
+                  handleAddFirst={this.handleAddFirst} linkedList={this.state.linkedList} arrayValues={this.state.arrayValues} />
               </div>
               <div>
                 <h5 className='stack-header'>The Singly Linked List</h5>
