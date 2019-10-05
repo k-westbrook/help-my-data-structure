@@ -113,6 +113,28 @@ export class SinglyLinkedListDS {
     }
   }
 
+  reverse() {
+    if (this.size() > 1) {
+      let current = this.head;
+      let previous = null;
+      let temp;
+
+      while (current) {
+        temp = current.next;
+        current.next = previous;
+        previous = current;
+        current = temp;
+
+      }
+
+      let newTail = this.head;
+      this.tail = newTail;
+      this.head = previous;
+    }
+
+
+  }
+
   getAllValues() {
     let arrayValues = [];
     for (let i = 0; i < this.size(); i++) {

@@ -110,6 +110,22 @@ class PushForm extends React.Component {
             </div>
           </form>
         </div>
+        <div className='action-item'>
+          <div className='button-group'>
+            <button className='button-style' onClick={this.props.handleReverse}>REVERSE</button>
+            <div className='peek-container'>
+
+              {(this.props.arrayValues.length === 0) ?
+                <div>
+                  <h5> Linked List is Empty, Add an Item!</h5 >
+                </div> :
+                <div>
+                </div>
+
+              }
+            </div>
+          </div>
+        </div>
       </div >
     );
   }

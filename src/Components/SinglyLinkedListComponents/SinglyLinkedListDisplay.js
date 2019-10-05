@@ -10,7 +10,6 @@ export default function SinglyLinkedListDisplay(props) {
       {
         props.arrayValues.map(node => {
           count++;
-          console.log(node)
           return (
             <div className='list-pair' key={count}>
               {(node.next) ?
