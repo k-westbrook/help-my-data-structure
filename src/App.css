@@ -274,7 +274,7 @@ padding:2vh;
   .ds-header{
     font-size:5vh;
     margin-top: 3vh;
-    margin-bottom: 0;
+    margin-bottom: 1.5vh;
   }
   .ds-explanation{
     height:15vh;
@@ -284,28 +284,29 @@ padding:2vh;
     border-style: solid;
     padding:1vw;
     font-size:1.5vh;
-
+    margin-bottom: 1.5vh;
 
   }
 
   .push-form{
     display: flex;
-    margin-top:2vh;
-    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
   }
 
   .button-group{
-    margin-left:1vw;
-    margin-right:10vw;
-    width: 20vw;
-    height: 25vh;
+
+    width: 25vw;
+    height: 30vh;
+    padding:1vh;
+    margin-bottom: 3vh;
 
   }
 
   .button-style{
     width: 25vw;
-    height:5vh;
+    height:7vh;
     background-color: black;
     border-color: #FFFFF6;
     color:#FFFFF6;
@@ -314,7 +315,7 @@ padding:2vh;
 
   .form-item-to-push
   {
-    font-size:2vh;
+    font-size:1.75vh;
     margin-top:1vh;
     margin-bottom: 1vh;
   }
@@ -350,11 +351,11 @@ padding:2vh;
   }
   .stack-header
   {
-    font-size: 8vh;
-    text-align: left;
+    font-size: 4vh;
+    text-align: center;
     padding:0;
-    margin-top:3vh;
     margin-bottom: 2vh;
+    margin-top:1vh;
   }
 
   .stack-item{
@@ -405,8 +406,10 @@ padding:2vh;
       margin-top: 2vh;
       margin-bottom: 2vh;
     padding:2vh;
-
-
     }
+
+
+
+
   }
 
