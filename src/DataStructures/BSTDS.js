@@ -94,15 +94,16 @@ export class BST {
         if (current.left) {
           queue.push(current.left);
         }
-        // else {
-        //   dataSet.push({ value: "empty" })
-        // }
+        else if (current.value !== "empty") {
+          queue.push({ value: "empty", level: current.level + 1 })
+
+        }
         if (current.right) {
           queue.push(current.right);
         }
-        // else {
-        //   dataSet.push({ value: "empty" })
-        // }
+        else if (current.value !== "empty") {
+          queue.push({ value: "empty", level: current.level + 1 })
+        }
       }
       if (levelRow.length > 0) {
         dataSet.push(levelRow);
