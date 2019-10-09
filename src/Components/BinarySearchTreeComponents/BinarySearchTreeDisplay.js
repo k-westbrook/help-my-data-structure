@@ -2,18 +2,31 @@ import React from 'react';
 import '../../App.css';
 
 export default function BinarySearchTreeDisplay(props) {
-  let count = -1;
+  let countRow = -1;
+  let countItem = 100 * countRow * 90;
   return (
-    < div className='stack-display-container' >
+    < div className='tree-display-container' >
       {
-        props.valuesArray.map(node => {
+        props.valuesArray.map(row => {
 
-          count++;
+          countRow++;
+
           return (
-            <div className='stack-item' key={count}>
-              <p>{node.value}</p>
+            <div className='tree-row' key={countRow}>
+              {row.map(node => {
+                countItem++;
+                return (
+                  <div className="tree-item" key={countItem}>
+                    <p>{node.value}</p>
+                  </div>
+                )
+              })
+
+              }
+
             </div>
           )
+
         })
       }
 
