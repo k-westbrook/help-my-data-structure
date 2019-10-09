@@ -197,6 +197,18 @@ background-color: #3F3F3F;
 
 }
 
+.tree-item-blank
+{
+  margin-left:.5vw;
+  margin-right:.5vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+padding:2vh;
+background-color: black;
+color:black;
+
+}
+
 .tree-row{
 display: flex;
 flex-direction: row;
