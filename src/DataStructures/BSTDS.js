@@ -139,7 +139,7 @@ export class BST {
       if (levelRow.length > 0) {
         dataSet.push(levelRow);
       }
-      console.log("MAX DEPTH IS  " + this.maxDepth);
+
       return dataSet;
     }
 

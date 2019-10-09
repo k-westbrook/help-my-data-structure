@@ -32,7 +32,6 @@ class BinarySearchTree extends React.Component {
   }
 
   render() {
-    console.log(this.state.valuesArray)
     return (
       <div className='stack-container'>
         <div>

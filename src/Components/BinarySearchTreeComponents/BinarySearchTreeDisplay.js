@@ -16,14 +16,14 @@ export default function BinarySearchTreeDisplay(props) {
               {row.map(node => {
                 countItem++;
                 return (
-                  <div>
+                  <div key={countItem}>
 
                     {(node.value !== "empty") ?
-                      <div className="tree-item" key={countItem}>
+                      <div className="tree-item" >
                         < p > {node.value}</p>
                       </div>
                       :
-                      <div className="tree-item-blank" key={countItem}>
+                      <div className="tree-item-blank">
                         < p ></p>
                       </div>
                     }
