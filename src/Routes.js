@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import Home from './Home';
-import BinarySearchTree from './Components/BinarySearchTree'
+import BinarySearchTree from './Components/BinarySearchTreeComponents/BinarySearchTree'
 import './App.css';
 import Stack from './Components/StackComponents/Stack';
 import Queue from './Components/QueueComponents/Queue';
