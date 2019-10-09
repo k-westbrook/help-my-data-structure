@@ -17,8 +17,15 @@ export default function BinarySearchTreeDisplay(props) {
                 countItem++;
                 return (
                   <div className="tree-item" key={countItem}>
-                    <p>{node.value}</p>
+                    {(node.value !== "empty") ?
+                      < p > {node.value}</p>
+
+                      :
+                      < p > Add Child</p>
+                    }
                   </div>
+
+
                 )
               })
 

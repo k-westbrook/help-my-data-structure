@@ -17,8 +17,8 @@ export class BST {
       let newNode = new NodeBST(value);
       while (true) {
         levelCount++;
-        if (value < this.root.value) {
-          if (currentNode.left) {
+        if (value < currentNode.value) {
+          if (currentNode.left && currentNode.left.value !== "empty") {
             currentNode = currentNode.left;
           } else {
             currentNode.left = newNode;
@@ -27,7 +27,7 @@ export class BST {
           }
 
         } else {
-          if (currentNode.right) {
+          if (currentNode.right && currentNode.right.value !== "empty") {
             currentNode = currentNode.right;
           } else {
             currentNode.right = newNode;

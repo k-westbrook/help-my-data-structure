@@ -201,7 +201,7 @@ background-color: #3F3F3F;
 display: flex;
 flex-direction: row;
 flex-wrap:wrap;
-justify-content: center;
+justify-content: space-around;
 }
 
 
