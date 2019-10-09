@@ -6,12 +6,14 @@ export class BST {
 
   constructor() {
     this.root = null;
+    this.maxDepth = null;
   }
   addNode(value) {
     let levelCount = 0;
     if (!this.root) {
       this.root = new NodeBST(value);
       this.root.level = levelCount;
+
     } else {
       let currentNode = this.root;
       let newNode = new NodeBST(value);
@@ -32,7 +34,6 @@ export class BST {
           } else {
             currentNode.right = newNode;
             newNode.level = levelCount;
-
             break;
           }
 
@@ -40,6 +41,7 @@ export class BST {
       }
 
     }
+    this.maxDepth = this.findMaxDepth();
   }
 
   getLevel(node) {
@@ -73,6 +75,33 @@ export class BST {
 
   }
 
+  findMaxDepth() {
+    let levelCount = -1;
+    if (this.root) {
+
+      let queue = [this.root, "L"];
+
+      while (true) {
+        let current = queue.shift();
+
+        if (current === "L") {
+          levelCount++;
+          if (queue.length === 0) {
+            break;
+          }
+          queue.push("L");
+        } else {
+          if (current.left && current.left.value !== "empty") {
+            queue.push(current.left);
+          }
+          if (current.right && current.right.value !== "empty") {
+            queue.push(current.right);
+          }
+        }
+      }
+    }
+    return levelCount;
+  }
 
   BFS() {
 
@@ -94,22 +123,26 @@ export class BST {
         if (current.left) {
           queue.push(current.left);
         }
-        else if (current.value !== "empty") {
+        else if (current.level !== this.maxDepth) {
+          // else if (current.value !== "empty") {
           queue.push({ value: "empty", level: current.level + 1 })
 
         }
         if (current.right) {
           queue.push(current.right);
         }
-        else if (current.value !== "empty") {
+        else if (current.level !== this.maxDepth) {
+          // else if (current.value !== "empty") {
           queue.push({ value: "empty", level: current.level + 1 })
         }
       }
       if (levelRow.length > 0) {
         dataSet.push(levelRow);
       }
+      console.log("MAX DEPTH IS  " + this.maxDepth);
       return dataSet;
     }
 
   }
+
 }

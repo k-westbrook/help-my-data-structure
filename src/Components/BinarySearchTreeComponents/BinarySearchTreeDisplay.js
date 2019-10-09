@@ -21,7 +21,7 @@ export default function BinarySearchTreeDisplay(props) {
                       < p > {node.value}</p>
 
                       :
-                      < p > Add Child</p>
+                      < p >A</p>
                     }
                   </div>
 
