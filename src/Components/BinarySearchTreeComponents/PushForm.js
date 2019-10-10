@@ -7,7 +7,7 @@ class PushForm extends React.Component {
     return (
       <div className='push-form' >
         <form onSubmit={this.props.handleAdd}>
-          <div className='button-group'>
+          <div className='button-group-tree'>
             <div >
 
               <button className='button-style'>ADD</button>

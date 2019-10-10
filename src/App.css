@@ -191,6 +191,9 @@ background-color: black;
   margin-right:.5vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  height:6vh;
+  width:3vw;
+  font-size:2vh;
 padding:2vh;
 border-style:solid;
 background-color: #3F3F3F;
@@ -204,6 +207,9 @@ background-color: #3F3F3F;
   margin-top: 2vh;
   margin-bottom: 2vh;
 padding:2vh;
+height:6vh;
+min-width: 3vw;;
+font-size:2vh;
 background-color: black;
 color:black;
 
@@ -334,7 +340,7 @@ padding:2vh;
 
   .push-form{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 
   }
@@ -344,7 +350,16 @@ padding:2vh;
     width: 25vw;
     height: 30vh;
     padding:1vh;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
+
+  }
+  .button-group-tree{
+
+    width: 25vw;
+    height: 20vh;
+    padding:1vh;
+    margin-bottom: 2vh;
+
 
   }
 
@@ -413,6 +428,56 @@ padding:2vh;
 
   }
 
+
+.tree-display-container
+{
+display: flex;
+flex-direction: column;
+border-style: solid;
+padding:1vh;
+font-size: 2vh;
+min-height: 40vh;
+width: 80vw;
+margin-bottom:5vh;
+background-color: black;
+
+}
+
+.tree-item{
+  margin-left:.5vw;
+  margin-right:.5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  height:3vh;
+  width:4vw;
+  font-size:1vh;
+padding:1vh;
+border-style:solid;
+background-color: #3F3F3F;
+
+}
+
+.tree-item-blank
+{
+  margin-left:.5vw;
+  margin-right:.5vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+padding:1vh;
+height:3vh;
+min-width: 4vw;;
+font-size:1vh;
+background-color: black;
+color:black;
+
+}
+
+.tree-row{
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content: space-around;
+}
   .peek-container{
     font-size:3vh;
     margin-top:1vh;
